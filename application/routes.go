@@ -24,7 +24,7 @@ func (a *App) loadRoutes() {
 	a.router = router
 }
 
-func (a *App) loadOrderRoutes(router chi.Router){
+func (a *App) loadOrderRoutes(router chi.Router) {
 	orderHandler := &handler.Order{
 		Repo: &order.RedisRepo{
 			Client: a.rdb,

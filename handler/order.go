@@ -1,6 +1,7 @@
 package handler
 
 import (
+	// "context"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -14,6 +15,24 @@ import (
 	"github.com/okekefrancis112/orders-api/model"
 	"github.com/okekefrancis112/orders-api/repository/order"
 )
+
+// type Repo interface {
+// 	Insert(ctx context.Context, order Order) error
+// 	FindByID(ctx context.Context, id uint64) (Order, error)
+// 	DeleteByID(ctx context.Context, id uint64) error
+// 	Update(ctx context.Context, order Order) error
+// 	FindAll(ctx context.Context, page FindAllPage) (FindResult, error)
+// }
+
+// type FindAllPage struct {
+// 	Size uint64
+// 	Offset uint64
+// }
+
+// type FindResult struct {
+// 	Orders []model.Order
+// 	Cursor uint64
+// }
 
 type Order struct{
 	Repo *order.RedisRepo
